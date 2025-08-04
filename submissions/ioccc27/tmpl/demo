@@ -1,0 +1,2 @@
+Hello \%{logname} and welcome to \${hostname}!
+Hello %{logname} and welcome to ${hostname}!

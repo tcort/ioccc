@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Tutorial</title>
+</head>
+<body>
+<h1>Hello ${logname}, and welcome to ${hostname}!</h1>
+<hr/>
+<p>
+Regular text is copied from standard input to standard output.
+However, <tt>\${</tt> and <tt>}</tt> are special characters. The characters are replaced
+by the output of the command(s) they enclose. For example, <tt>\${hostname}</tt> put the
+hostname in the heading above.
+</p>
+<p>
+Suppose you have some command output that contains HTML entities like <tt>&lt;</tt>, <tt>&gt;</tt>, <tt>&amp;</tt>, etc.
+Those can be escaped by enclosing the command in <tt>\%{</tt> and <tt>}</tt>.
+</p>
+<p>
+The literals <tt>\${</tt> and <tt>\%{</tt> can be escaped with a leading backslash: <tt>\\${</tt> and <tt>\\%</tt>.
+The <tt>}</tt> does not need to be escaped.
+</p>
+<p>
+Shell expressions and pipelines may be used. For example, <tt>\${who|wc -l}</tt> would show that there are ${who|wc -l}
+users currently logged in to this system. Environment variables are also accessible. For example, <tt>\${echo $HOME}</tt>
+would show the user's home directory is <tt>${echo $HOME}</tt>.
+</p>
+<hr/>
+Last updated: ${date}
+</body>
+</html>
